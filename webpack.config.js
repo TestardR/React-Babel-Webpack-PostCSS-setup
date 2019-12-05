@@ -7,13 +7,6 @@ module.exports = {
     entry: {
         // JS 
         main: './src/index.js',
-        // CSS themes
-          "theme-light": "./node_modules/matrix-react-sdk/res/themes/light/css/light.scss",
-  /*           "theme-dark": "./node_modules/matrix-react-sdk/res/themes/dark/css/dark.scss",
-            "theme-light-custom": "./node_modules/matrix-react-sdk/res/themes/light-custom/css/light-custom.scss",
-            "theme-dark-custom": "./node_modules/matrix-react-sdk/res/themes/dark-custom/css/dark-custom.scss",
-            "theme-agoria": "./node_modules/matrix-react-sdk/res/themes/agoria/css/agoria.scss", */
-            "components": "./res/css/_components.scss",
     },
     output: {
         path: path.resolve(__dirname, 'build'),
