@@ -101,9 +101,6 @@ module.exports = {
             // using `npm link` / `yarn link`.
             "react": path.resolve('./node_modules/react'),
             "react-dom": path.resolve('./node_modules/react-dom'),
-
-            // same goes for js-sdk
-            "matrix-js-sdk": path.resolve('./node_modules/matrix-js-sdk'),
         },
     },
     plugins: [
