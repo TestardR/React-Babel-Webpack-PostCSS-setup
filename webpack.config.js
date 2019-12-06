@@ -17,9 +17,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader"
-                },
+                use: ["babel-loader", "eslint-loader"],
                 include: [path.resolve(__dirname, 'src')]
             },
             {
@@ -58,7 +56,7 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     // Translates CSS into CommonJS
                     'css-loader']
-            }, 
+            },
             {
                 test: /\.(gif|png|svg|ttf|woff|woff2|xml|ico)$/,
                 // Use a content-based hash in the name so that we can set a long cache
@@ -71,7 +69,7 @@ module.exports = {
                         options: {
                             name: '[name].[hash:7].[ext]',
                             outputPath: getImgOutputPath,
-                            publicPath: function(url, resourcePath) {
+                            publicPath: function (url, resourcePath) {
                                 // CSS image usages end up in the `bundles/[hash]` output
                                 // directory, so we adjust the final path to navigate up
                                 // twice.
@@ -86,7 +84,7 @@ module.exports = {
                         options: {
                             name: '[name].[hash:7].[ext]',
                             outputPath: getImgOutputPath,
-                            publicPath: function(url, resourcePath) {
+                            publicPath: function (url, resourcePath) {
                                 const outputPath = getImgOutputPath(url, resourcePath);
                                 return toPublicPath(outputPath);
                             },
