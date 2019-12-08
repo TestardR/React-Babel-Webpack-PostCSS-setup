@@ -1,13 +1,11 @@
-:root {
-  --mainColor: blue;
-}
+$main-color: pink;
 
 // body {
 //   background: url("../assets/images/charles-538048-unsplash.jpg");
 // }
 
 .title {
-  color: var(--mainColor);
+  color: $main-color;
 }
 
 .title {
