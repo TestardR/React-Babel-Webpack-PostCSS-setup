@@ -1,9 +1,13 @@
-body {
-  background: url("../assets/images/charles-538048-unsplash.jpg");
+:root {
+  --mainColor: blue;
 }
 
+// body {
+//   background: url("../assets/images/charles-538048-unsplash.jpg");
+// }
+
 .title {
-  color: palevioletred;
+  color: var(--mainColor);
 }
 
 .title {

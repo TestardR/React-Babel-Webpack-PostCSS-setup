@@ -4,10 +4,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: {
-    // JS
-    main: "./src/index.js"
-  },
+  entry: ["react-hot-loader/patch", "./src/index.js"],
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "[name].[hash].js"
@@ -89,6 +86,11 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    alias: {
+      "react-dom": "@hot-loader/react-dom"
+    }
   },
   plugins: [
     new CleanWebpackPlugin(),
